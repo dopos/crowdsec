@@ -5,5 +5,10 @@ services:
   # This service will extend code from dcape
   app:
     environment:
-      # Some var to keep YML struct
-      - DEBUG=yes
+      COLLECTIONS: "crowdsecurity/nginx"
+      GID: "${GID-1000}"
+    volumes:
+      - ${APP_ROOT}/db:/var/lib/crowdsec/data
+      - ${APP_ROOT}/config:/etc/crowdsec
+      #- ./crowdsec/acquis.yaml:/etc/crowdsec/acquis.yaml
+      #- logs:/var/log/nginx
