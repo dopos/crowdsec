@@ -25,13 +25,8 @@ cscli:
   color: auto
 db_config:
   log_level: info
-  type: sqlite
-  db_path: /var/lib/crowdsec/data/crowdsec.db
+  type: postgresql
   #max_open_conns: 100
-
-    environment:
-      - PG_CONNECTION_STRING=postgres://:@db/?sslmode=disable
-
   user: ${PGUSER}
   password: ${PGPASSWORD}
   db_name: ${PGDATABASE}
