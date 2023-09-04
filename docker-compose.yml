@@ -7,6 +7,9 @@ services:
     environment:
       COLLECTIONS: "crowdsecurity/nginx"
       GID: "${GID-1000}"
+      PGUSER
+      PGPASSWORD
+      PGDATABASE
     volumes:
       - ${APP_ROOT}/db:/var/lib/crowdsec/data
       - ${APP_ROOT}/config:/etc/crowdsec

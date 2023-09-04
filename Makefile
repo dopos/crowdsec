@@ -16,7 +16,7 @@ IMAGE              ?= crowdsecurity/crowdsec
 IMAGE_VER          ?= v1.2.0
 
 # If you need database, uncomment this var
-#USE_DB              = yes
+USE_DB              = yes
 
 # If you need user name and password, uncomment this var
 #ADD_USER            = yes
